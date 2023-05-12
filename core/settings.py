@@ -27,12 +27,14 @@ DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
     'https://web-production-d9c5.up.railway.app/'
-],
+]
+
 ALLOWED_HOSTS = [
-    '*',
-],
+    '*'
+]
+
 CORS_ORIGIN_WHITELIST = [
-    'https://web-production-d9c5.up.railway.app/',
+    'https://web-production-d9c5.up.railway.app/'
 ]
 
 
