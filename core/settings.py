@@ -26,13 +26,13 @@ SECRET_KEY = 'django-insecure-03(n1glrlc@f_luw42onqa8f33kj(+5t6sx=a!vi$b@&vvpn#h
 DEBUG = True
 
 CSRF_TRUSTED_ORIGINS = [
-    '*'
+    'https://web-production-d9c5.up.railway.app/'
 ],
 ALLOWED_HOSTS = [
     '*',
 ],
 CORS_ORIGIN_WHITELIST = [
-    '*',
+    'https://web-production-d9c5.up.railway.app/',
 ]
 
 
