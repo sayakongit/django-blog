@@ -1,0 +1,33 @@
+{% extends 'index.html' %} {% block content %}
+<div
+  class="container mt-4 p-2 d-flex align-items-center justify-content-center"
+>
+  <div class="card p-4 w-50">
+    <form class="" method="post" action="/write_blog/">
+      {% csrf_token %}
+      <h4>Write a Blog!</h4>
+      <div class="mb-3 mt-3">
+        <label for="title" class="form-label">Title</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title"
+          name="title"
+          placeholder="Enter the blog title"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="content" class="form-label">Blog Content</label>
+        <textarea
+          class="form-control"
+          id="content"
+          name="content"
+          rows="5"
+          placeholder="Write your blog here..."
+        ></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Add Blog</button>
+    </form>
+  </div>
+</div>
+{% endblock content %}

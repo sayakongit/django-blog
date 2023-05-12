@@ -1,0 +1,22 @@
+{% extends 'index.html' %} {% block content %}
+<div class="container p-4">
+  <h5>Hello, {{request.user}}</h5>
+
+  <h3 class="my-4">Read Articles</h3>
+
+  <div class="d-flex justify-content-start flex-wrap gap-4">
+    {% for article in articles %}
+    <div class="card mb-4" style="width: 18rem">
+      <a href="{{article.url}}" target="_blank">
+        <img src="{{article.urlToImage}}" class="card-img-top" alt="image" />
+      </a>
+
+      <div class="card-body">
+        <h5 class="card-title">{{article.title}}</h5>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% endblock content %}

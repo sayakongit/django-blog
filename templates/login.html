@@ -1,0 +1,56 @@
+{% extends 'index.html' %} {% block content %}
+<div
+  class="container mt-4 p-2 d-flex align-items-center justify-content-center"
+>
+  <div class="card p-4 w-50">
+    <form class="" method="post" action="/login/">
+      {% csrf_token %}
+      <h4>Welcome Back!</h4>
+      <div class="mb-3 mt-3">
+        <label for="l-username" class="form-label">Username</label>
+        <input
+          type="text"
+          class="form-control"
+          id="l-username"
+          name="l-username"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="l-password" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="l-password"
+          name="l-password"
+        />
+      </div>
+      <div class="mb-3">
+        {% if messages %}
+          <ul class="messages">
+              {% for message in messages %}
+              <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+              {% endfor %}
+          </ul>
+        {% endif %}
+      </div>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <p class="mt-4">
+        Don't have an account?
+        <a
+          href="/signup"
+          style="color: black !important; text-decoration: underline !important"
+          >Register</a
+        >
+      <p class="mt-1">
+        Forgot password?
+        <a
+          href="/forgot_password/"
+          style="color: black !important; text-decoration: underline !important"
+          >Click here</a
+        >
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock content %}
