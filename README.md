@@ -8,7 +8,7 @@
 
 `$ git clone https://github.com/sayakongit/django-blog.git`
 
-`$ cd django_project_blogapp/`
+`$ cd django-blog/`
 
 If virtualenv is not installed [(What is virtualenv?)](https://www.youtube.com/watch?v=N5vscPTWKOk&t=313s):
 
