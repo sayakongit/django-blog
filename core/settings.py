@@ -33,10 +33,6 @@ ALLOWED_HOSTS = [
     '*'
 ]
 
-CORS_ORIGIN_WHITELIST = [
-    'https://web-production-d9c5.up.railway.app/'
-]
-
 
 # Application definition
 
